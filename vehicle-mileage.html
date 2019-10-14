@@ -31,8 +31,8 @@
             let endingOdometer = parseFloat(document.querySelector('#endingOdometer').value);
             let gallon = parseFloat(document.querySelector('#gallon').value);
             let divElement = document.querySelector('#divText');
-            let mpg = endingOdometer - initOdometer;
-            divElement.innerHTML = `You spent ${mpg}mpg.`;
+            let mpg = (endingOdometer - initOdometer)/gallon;
+            divElement.innerHTML = `You spent ${mpg.toFixed(2)}mpg.`;
             initOdometer = '';
             endingOdometer = '';
             gallon = '';
