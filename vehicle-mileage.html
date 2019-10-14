@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vehicle Mileage</title>
+</head>
+<body>
+    
+    <main>
+        <h1>Vehicle Mileage</h1>
+
+        <label>Beginning odometer value:</label>
+        <input type="text" id="initOdometer" placeholder="*" required><br><br>
+        <label>Ending odometer value:</label>
+        <input type="text" id="endingOdometer" placeholder="*" required><br><br>
+        <label>Number of gallons used:</label>
+        <input type="text" id="gallon" placeholder="*" required><br><br>
+        <button type="button" id="btnResult">Result in MPG</button>
+        <div id="divText"></div>
+    </main>
+
+    <script>
+
+        let buttonElement = document.querySelector('#btnResult');
+        buttonElement.addEventListener('click', calcMileage);
+
+        function calcMileage () {
+            let initOdometer = parseFloat(document.querySelector('#initOdometer').value);
+            let endingOdometer = parseFloat(document.querySelector('#endingOdometer').value);
+            let gallon = parseFloat(document.querySelector('#gallon').value);
+            let divElement = document.querySelector('#divText');
+            let mpg = endingOdometer - initOdometer;
+            divElement.innerHTML = `You spent ${mpg}mpg.`;
+            initOdometer = '';
+            endingOdometer = '';
+            gallon = '';
+        }
+
+    </script>
+</body>
+</html>
