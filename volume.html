@@ -36,11 +36,7 @@
             </tr>
             <tr>
                 <td>1</td>
-                <td>0.25</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>1</td>
+                <td>0.946</td>
             </tr>
         </table>
 
@@ -57,7 +53,7 @@
 
         function calcVolume () {
             let inputElement = parseFloat(document.querySelector('#iptVolume').value);
-            let gallon = inputElement/4;
+            let gallon = inputElement*0.946;
             let divElement = document.querySelector('#divText');
             divElement.innerHTML = `Value in gallons: ${gallon}`;
             inputElement = '';
