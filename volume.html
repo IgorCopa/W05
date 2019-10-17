@@ -31,8 +31,8 @@
         <h1>Volume Conversion</h1>
         <table>
             <tr>
-                <td>Quart (US)</td>
-                <td>Gallon (US)</td>
+                <td>Quart</td>
+                <td>Liters</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -53,9 +53,9 @@
 
         function calcVolume () {
             let inputElement = parseFloat(document.querySelector('#iptVolume').value);
-            let gallon = inputElement*0.946;
+            let liter = inputElement*0.946;
             let divElement = document.querySelector('#divText');
-            divElement.innerHTML = `Value in gallons: ${gallon}`;
+            divElement.innerHTML = `Value in liters: ${liter}`;
             inputElement = '';
         }
 
